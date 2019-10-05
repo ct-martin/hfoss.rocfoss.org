@@ -10,8 +10,9 @@ do
         mkdir -p $NEWDIR
     fi
     NEWFILE="$NEWDIR/$YEAR-01-01-$NAME.md"
+    WEIRDHEAD=$(head -n 1 $f | grep -Eq "#hfoss")
     echo "---" > $NEWFILE
-    if [ '$(head -n 1 $f | grep -Eq "#hfoss")' ] # remove weird thing at start of some files
+    if [ $WEIRDHEAD ] # remove weird thing at start of some files
     then
         tail -n +2 $f >> $NEWFILE
     else
