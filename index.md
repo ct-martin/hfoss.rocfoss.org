@@ -3,9 +3,8 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: page
-title: Home
+title: HFOSS
 ---
-# HFOSS
 
 _The RIT Humanitarian Free/Open Source Software Development Course_
 
@@ -14,11 +13,3 @@ _The RIT Humanitarian Free/Open Source Software Development Course_
 *    IGME582.01.2175
 *    Golisano Hall (GOL)-2350
 *    deejoe@mail.rit.edu
-
-
-{% for post in site.posts %}
-
-## [{{ post.title }}]({{ post.url }})
-> {{ post.excerpt }}
-
-{% endfor %}

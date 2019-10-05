@@ -22,8 +22,11 @@ github_username:  ritjoe
 
 # Build settings
 markdown: kramdown
-permalink: pretty
+permalink: /:categories/:title/
 excerpt_separator: <!--more-->
+
+# Config for semester
+current_semester: "2018/spring"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
