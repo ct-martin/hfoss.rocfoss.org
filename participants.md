@@ -52,14 +52,29 @@ title: Participants
         role="tabpanel"
         aria-labelledby="semlist-{{id}}-tab"
     >
-        {% for post in site.posts %}
+        <div class="row">
+        {% assign allposts = site.posts | reverse %}
+        {% for post in allposts %}
             {% if post.categories.first == "people" %}
             {% assign sem = post.categories | join: "/" | remove: "people/" %}
             {% if sem == i %}
-                <p><a href="{{ post.url }}">{{ post.name }}</a></p>
+            <div class="col-12 col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="{{ post.url }}">{{ post.name }}</a></h5>
+                        <p class="card-text"><strong>Homework ({{ post.hw.size }}):</strong></p>
+                        <ul>
+                            {% for hw in post.hw %}
+                            <li><a href="{{ hw[1] }}">{{ hw[0] }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
             {% endif %}
             {% endif %}
         {% endfor %}
+        </div>
     </div>
 {% endfor %}
 </div>
