@@ -16,8 +16,8 @@
 title: "HFOSS@RIT"
 description: >- # this means to ignore newlines until "baseurl:"
   RIT HFOSS course website
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://hfoss.rocfoss.org" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "hfoss" # the subpath of your site, e.g. /blog
+url: "https://ritjoe.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  ritjoe
 
 # Build settings
