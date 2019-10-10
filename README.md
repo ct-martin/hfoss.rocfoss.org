@@ -1,0 +1,41 @@
+# HFOSS Course Website
+
+This site has three main goals:
+
+* Clean migration of content from [ofCourse](http://github.com/FOSSRIT/ofCourse))
+* Run anywhere
+* CI (inc. against PRs)
+
+To this end the following things have been done:
+
+* A `migrate.sh` script
+* Choosing Jekyll to run the site, [Quickstart & install docs here](https://jekyllrb.com/docs/)
+* GitLab CI
+
+Content exists in two forms:
+
+* Markdown (`.md`) files for page content
+* People in `people/$YYYY/$SEMESTER/_posts/$YYYY-01-01-$NICK.md` files via YAML front-matter
+
+## People pages
+
+This uses the same spec as ofCourse. If you need help, and the below isn't enough, take a look at other peoples' pages.
+
+### Required fields
+
+* `name` - human name
+* `irc` - IRC/chat username
+* `rit_dce` - RIT computer account username
+* `blog` - URL of blog
+* `feed` - RSS feed URL for blog
+* `forge` - list of git "forges" (websites, e.g. GitHub, GitLab)
+
+### Optional, but highly encouraged, fields
+
+* `major` - program of study
+* `bio` - short "about you"
+
+### Homework
+
+* Under `hw` field
+* Format is `assignment_name: URL`
